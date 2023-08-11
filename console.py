@@ -105,13 +105,13 @@ class HBNBCommand(cmd.Cmd):
         if line_data == "" or line_data is None:
             print("** class name missing **")
         else:
-            words = line_data.split(' ')
-            if words[0] not in storage.classes():
+            content = line_data.split(' ')
+            if content[0] not in storage.classes():
                 print("** class doesn't exist **")
-            elif len(words) < 2:
+            elif len(content) < 2:
                 print("** instance id missing **")
             else:
-                Entry = "{}.{}".format(words[0], words[1])
+                Entry = "{}.{}".format(content[0],content[1])
                 if Entry not in storage.all():
                     print("** no instance found **")
                 else:
@@ -123,13 +123,13 @@ class HBNBCommand(cmd.Cmd):
         if line_data == "" or line_data is None:
             print("** class name missing **")
         else:
-            words = line_data.split(' ')
-            if words[0] not in storage.classes():
+            content = line_data.split(' ')
+            if content[0] not in storage.classes():
                 print("** class doesn't exist **")
-            elif len(words) < 2:
+            elif len(content) < 2:
                 print("** instance id missing **")
             else:
-                Entry = "{}.{}".format(words[0], words[1])
+                Entry = "{}.{}".format(content[0],content[1])
                 if Entry not in storage.all():
                     print("** no instance found **")
                 else:
@@ -140,12 +140,12 @@ class HBNBCommand(cmd.Cmd):
         """Prints all string representation of all instances.
         """
         if line_data != "":
-            words = line_data.split(' ')
-            if words[0] not in storage.classes():
+            content = line_data.split(' ')
+            if content[0] not in storage.classes():
                 print("** class doesn't exist **")
             else:
                 nl = [str(obj) for Entry, obj in storage.all().items()
-                      if type(obj).__name__ == words[0]]
+                      if type(obj).__name__ ==content[0]]
                 print(nl)
         else:
             new_list = [str(obj) for Entry, obj in storage.all().items()]
@@ -154,15 +154,15 @@ class HBNBCommand(cmd.Cmd):
     def do_count(self, line_data):
         """Counts the instances of a class.
         """
-        words = line_data.split(' ')
-        if not words[0]:
+        content = line_data.split(' ')
+        if not content[0]:
             print("** class name missing **")
-        elif words[0] not in storage.classes():
+        elif content[0] not in storage.classes():
             print("** class doesn't exist **")
         else:
             verified_dataes = [
                 k for k in storage.all() if k.startswith(
-                    words[0] + '.')]
+                   content[0] + '.')]
             print(len(verified_dataes))
 
     def do_update(self, line_data):
@@ -176,7 +176,7 @@ class HBNBCommand(cmd.Cmd):
         verified_data = re.search(rex, line_data)
         classname = verified_data.group(1)
         uid = verified_data.group(2)
-        property = verified_data.group(3)
+        attribute = verified_data.group(3)
         value = verified_data.group(4)
         if not verified_data:
             print("** class name missing **")
@@ -202,8 +202,8 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     value = value.replace('"', '')
                 properties = storage.attributes()[classname]
-                if property in properties:
-                    value = properties[property](value)
+                if attribute in properties:
+                    value = properties[attribute](value)
                 elif _type:
                     try:
                         value = _type(value)
