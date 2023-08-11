@@ -24,39 +24,6 @@ And as part of the implementation of the command line interpreter coupled with t
 -   Updating attributes of an object
 -   Destroying an object
 
-## How to start it
-These instructions will get you a copy of the project up and running on your local machine (Linux distro) for development and testing purposes.
-
-## Installing
-
-You will need to clone the repository of the project from Github. This will contain the simple shell program and all of its dependencies.
-
-```
-git clone https://github.com/jzamora5/AirBnB_clone.git
-```
-After cloning the repository you will have a folder called AirBnB_clone. In here there will be several files that allow the program to work.
-
-> /console.py : The main executable of the project, the command interpreter.
->
-> models/engine/file_storage.py: Class that serializes instances to a JSON file and deserializes JSON file to instances
-> 
-> models/__ init __.py:  A unique `FileStorage` instance for the application
-> 
-> models/base_model.py: Class that defines all common attributes/methods for other classes.
-> 
-> models/user.py: User class that inherits from BaseModel
-> 
->models/state.py: State class that inherits from BaseModel
->
->models/city.py: City class that inherits from BaseModel
->
->models/amenity.py: Amenity class that inherits from BaseModel
->
->models/place.py: Place class that inherits from BaseModel
->
->models/review.py: Review class that inherits from BaseModel
-
-
 
 ## How to use it
 It can work in two different modes:
@@ -121,7 +88,7 @@ Example:
 
 user@ubuntu:~/AirBnB$ ./console.py
 (hbnb) create BaseModel
-49faff9a-6318-451f-87b6-910505c55907
+49445f9a-6318-451f-87b6-91dvtrefsd07
 user@ubuntu:~/AirBnB$ ./console.py
 
 ```
@@ -131,14 +98,12 @@ or
 ```
 user@ubuntu:~/AirBnB$ ./console.py $ echo "create BaseModel" | ./console.py
 (hbnb)
-e37ebcd3-f8e1-4c1f-8095-7a019070b1fa
+e37ebcd3-f8e1-4c1f-80445-7a0196765
 (hbnb)
 user@ubuntu:~/AirBnB$ ./console.py
 ```
 
 ## Available commands and what they do
-
-The recognizable commands by the interpreter are the following:
 
 |Command| Description |
 |--|--|
