@@ -185,32 +185,32 @@ class HBNBCommand(cmd.Cmd):
         elif uid is None:
             print("** instance id missing **")
         else:
-            Entry = "{}.{}".format(classname, uid)
-            if Entry not in storage.all():
+            Key = "{}.{}".format(classname, uid)
+            if Key not in storage.all():
                 print("** no instance found **")
-            elif not property:
-                print("** property name missing **")
+            elif not attribute:
+                print("** attribute name missing **")
             elif not value:
                 print("** value missing **")
             else:
-                _type = None
+                _typ = None
                 if not re.search('^".*"$', value):
                     if '.' in value:
-                        _type = float
+                        _typ = float
                     else:
-                        _type = int
+                        _typ = int
                 else:
                     value = value.replace('"', '')
                 properties = storage.attributes()[classname]
                 if attribute in properties:
                     value = properties[attribute](value)
-                elif _type:
+                elif _typ:
                     try:
-                        value = _type(value)
+                        value = _typ(value)
                     except ValueError:
                         pass
-                setattr(storage.all()[Entry], property, value)
-                storage.all()[Entry].save()
+                setattr(storage.all()[Key], attribute, value)
+                storage.all()[Key].save()
 
 
 if __name__ == '__main__':
