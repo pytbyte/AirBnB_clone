@@ -71,13 +71,13 @@ class HBNBCommand(cmd.Cmd):
                         value = properties[property](value)
                     setattr(storage.all()[Entry], property, value)
                 storage.all()[Entry].save()
-    
-    def do_help(self):
-        """Show the list of available commands."""
+    """
+    def do_help(self, line):
+        
         print("Documented commands (type help <topic>):")
         print("========================================")
         print("EOF  help  quit")
-
+    """
 
     def do_EOF(self, line_data):
         """Handles End Of File character.
