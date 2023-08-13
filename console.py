@@ -72,7 +72,7 @@ class HBNBCommand(cmd.Cmd):
                     setattr(storage.all()[Entry], property, value)
                 storage.all()[Entry].save()
     
-    def do_help(self, args):
+    def do_help(self):
         """Show the list of available commands."""
         print("Documented commands (type help <topic>):")
         print("========================================")
