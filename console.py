@@ -46,10 +46,9 @@ class HBNBCommand(cmd.Cmd):
             if chkd_data_attr_and_value:
                 attr_and_value = (chkd_data_attr_and_value.group(
                     1) or "") + " " + (chkd_data_attr_and_value.group(2) or "")
-        user_command = method + " " + classname + " "
-        + uid + " " + attr_and_value
-        self.onecmd(user_command)  # show User "877548969gygy"
-        return user_command
+        _command = method + " " + classname + " " + uid + " " + attr_and_value
+        self.onecmd(_command)  # show User "877548969gygy"
+        return _command
 
     def update_dict(self, classname, uid, s_dict):
         """Method to update from Dictonary"""
