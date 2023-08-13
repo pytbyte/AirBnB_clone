@@ -65,7 +65,7 @@ class HBNBCommand(cmd.Cmd):
             if Entry not in storage.all():
                 print("** no instance found **")
             else:
-                properties = storage.properties()[classname]
+                properties = storage.attributes()[classname]
                 for property, value in dict_.items():
                     if property in properties:
                         value = properties[property](value)
