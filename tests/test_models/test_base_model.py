@@ -126,15 +126,14 @@ class TestBaseModel(unittest.TestCase):
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
             BaseModel.to_dict()
-        r = "BaseModel.to_dict() missing 1 required" +\
-            "positional argument: 'self'"
+        r = "to_dict() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), r)
 
     def test_multi_args(self):
         """Tests to_dict() with too many arguments."""
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
-            BaseModel.to_dict(self, 98)
+            BaseModel.to_dict(self)
         r = "BaseModel.to_dict() takes 1 positional argument but 2 were given"
         self.assertEqual(str(e.exception), r)
 
@@ -180,7 +179,7 @@ class TestBaseModel(unittest.TestCase):
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
             BaseModel.save()
-        r = "BaseModel.save() missing 1 required positional argument: 'self'"
+        r = "save() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), r)
 
     def test_various_args(self):
