@@ -76,7 +76,7 @@ class HBNBCommand(cmd.Cmd):
         """To get help on a command, type help <topic>.
         """
         return super().do_help(line_data)
-    
+
     def do_EOF(self, line_data):
         """Handles End Of File character.
         """
