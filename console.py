@@ -72,11 +72,11 @@ class HBNBCommand(cmd.Cmd):
                     setattr(storage.all()[Entry], property, value)
                 storage.all()[Entry].save()
     
-    def do_help(self):
-        """Show the list of available commands."""
-        print("Documented commands (type help <topic>):")
-        print("========================================")
-        print("EOF  help  quit")
+    # def do_help(self):
+    #     """Show the list of available commands."""
+    #     print("Documented commands (type help <topic>):")
+    #     print("========================================")
+    #     print("EOF  help  quit")
 
 
     def do_EOF(self, line_data):
