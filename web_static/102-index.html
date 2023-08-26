@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="styles/102-common.css">
+    <link rel="stylesheet" href="styles/102-header.css">
+    <link rel="stylesheet" href="styles/102-footer.css">
+    <link rel="stylesheet" href="styles/102-filters.css">
+    <link rel="stylesheet" href="styles/102-places.css">
+    <title>AirBnB clone</title>
+  </head>
+  <body>
+    <header>
+      <div class="mobile_nav">
+        <label for="main_check" class="main_nav_burguer">|||</label>
+        <input
+          type="checkbox"
+          id="main_check"
+          name="main_check"
+          class="main_nav_check"
+        >
+        <nav>
+          <ul class="nav_bar_level1">
+            <li>
+              <label for="second_check"><span>States</span></label>
+              <input type="checkbox" name="second_check" id="second_check">
+              <ul>
+                <li><span>Mombasa</span></li>
+                <li><span>Kisumu</span></li>
+              </ul>
+            </li>
+            <li>
+              <label for="third_check"><span>Amenities</span></label>
+              <input type="checkbox" name="second_check" id="third_check">
+              <ul>
+                <li><span>Parking</span></li>
+                <li><span>Tv</span></li>
+                <li><span>Wifi</span></li>
+                <li><span>Kitchen</span></li>
+                <li><span>Pool</span></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- final del main_nav_bar -->
+      </div>
+    </header>
+    <div class="container">
+      <section class="filters">
+        <div class="locations">
+          <h3>States</h3>
+          <h4>Mombasa,Kisumu...</h4>
+          <ul class="popover">
+            <li>
+              <h2>Mombasa:</h2>
+              <ul>
+                <li>Mwembe tayari</li>
+                <li>Mpeketoni</li>
+              </ul>
+            </li>
+            <li>
+              <h2>Kisumu:</h2>
+              <ul>
+                <li>Plot 10</li>
+                <li>Viwandani</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="amenities">
+          <h3>Amenities</h3>
+          <h4>Internet, Pool...</h4>
+          <ul class="popover">
+            <li>Internet</li>
+            <li>Tv Cable</li>
+            <li>Kitchen</li>
+            <li>Pool</li>
+          </ul>
+        </div>
+        <button type="button" name="button">Search</button>
+      </section>
+      <!-- end fiter-->
+
+      <section class="places">
+        <h1>Places</h1>
+        <article>
+          <!-- My home -->
+          <div class="article_places_header">
+            <h2>My home</h2>
+            <div class="price_by_night">$80</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div>
+          <!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Simon Cox</p>
+          </div>
+          <!-- end user -->
+          <div class="description">
+            <p>
+             come camp or work, whatever you need we got it.
+            </p>
+          </div>
+          <!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+              </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv Cable
+              </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+              </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Emma 27th August 2023</h3>
+                <p>Easily accesible and far from the city vibe
+                    the spot is one that creates memories.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- end My home -->
+
+        <article>
+          <h2>Tiny house</h2>
+          <div class="price_by_night">$65</div>
+          <div class="information">
+            <div class="max_guest">4 Guests</div>
+            <div class="number_rooms">2 Bedrooms</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div>
+          <!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Temmy Kiprop</p>
+          </div>
+          <!-- end user -->
+          <div class="description">
+            <p>
+                Introducing our charming retreat, a private and affordable 
+                standalone guest house nestled in the heart of Nakuru. 
+                Perfectly situated just moments away from the vibrant Woodlands district, 
+                our cozy haven offers easy access to both the bustling city center and serene natural landscapes. 
+                Step into a thoughtfully designed 350-square-foot space that combines comfort with style. 
+                The well-appointed bedroom features a full bath, while the mini kitchen provides a
+                ll the essentials for culinary adventures. With soaring ceilings that create an airy ambiance, 
+                the living room invites relaxation, and the handcrafted counter area adds a touch of uniqueness.
+                 Whether you're exploring the nearby Milimani district or unwinding on the porch and deck, 
+                our guest house promises an authentic and rejuvenating stay.
+            </p>
+          </div>
+          <!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+              </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Maxwell the 15th August 2023</h3>
+                <p>Anne is an epic host. Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Jane 4th August 2022</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <h2>A suite</h2>
+          <div class="price_by_night">$190</div>
+          <div class="information">
+            <div class="max_guest">5 Guests</div>
+            <div class="number_rooms">3 Bedroom</div>
+            <div class="number_bathrooms">2 Bathroom</div>
+          </div>
+          <!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Michael Omwami</p>
+          </div>
+          <!-- end user -->
+          <div class="description">
+            <p>
+              First loft built by Holbies. It contains a decked terrace,
+              jacuzzi, firepit, rabbits garden, two rooms, two balconies,
+              entrance gate, private garden, private parking, BBQ area, AC in
+              each bedroom, technological equipment, luxury beds, and mountain
+              views. Ideal for architecture lovers, romantic dates, or having a
+              good time. It is a unique space of his kind. Only pets that do not
+              harm rabbits are allowed.
+            </p>
+          </div>
+          <!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+              </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+              </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+              </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Gary the 13th August 2023</h3>
+                <p>I love this place. Amazing!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <!-- My home -->
+          <div class="article_places_header">
+            <h2>My house</h2>
+            <div class="price_by_night">$50</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div>
+          <!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b>JOE B</p>
+          </div>
+          <!-- end user -->
+          <div class="description">
+            <p>
+                Discover a charming 1-bedroom apartment in Lamu,
+                 perfectly suited for 2 guests. Situated at the heart of the city and 
+                 conveniently located near subway line 1
+                , you'll be just a quick ride away from People Square, Bund, and Jungan Apartments.
+            </p>
+          </div>
+          <!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+              </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+              </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+              </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Timmy luis 27th August 2023</h3>
+                <p>best chill spot!</p>
+              </li>
+              <li>
+                <h3>From grey 4th August 2023</h3>
+                <p>best ive visited!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- end My home -->
+
+        <article>
+          <!-- My home -->
+          <div class="article_places_header">
+            <h2>Baraka Rooms</h2>
+            <div class="price_by_night">$75</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">2 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div>
+          <!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Kamar Rahim</p>
+          </div>
+          <!-- end user -->
+          <div class="description">
+            <p>
+             simple ocaen view that beats Anything!
+            </p>
+          </div>
+          <!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+              </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+              </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+              </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Simple boy the 15th August 2023</h3>
+                <p>Simply elegant!</p>
+              </li>
+              <li>
+                <h3>From Tommy  4th August 2023</h3>
+                <p>Extraordinary!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- end My home -->
+
+        <article>
+          <!-- My home -->
+          <div class="article_places_header">
+            <h2>Highend urban</h2>
+            <div class="price_by_night">$234</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">8 Guests</div>
+            <div class="number_rooms">3 Bedroom</div>
+            <div class="number_bathrooms">3 Bathroom</div>
+          </div>
+          <!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> mwelusi Ngema</p>
+          </div>
+          <!-- end user -->
+          <div class="description">
+            <p>
+              you should come see.
+            </p>
+          </div>
+          <!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+              </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+              </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+              </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Ibrahim Masakwa August 4th, 2022</h3>
+                <p> Amazing!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- end My home -->
+      </section>
+      <!-- end section -->
+    </div>
+    <footer>
+      <p>Best School</p>
+    </footer>
+  </body>
+</html>
